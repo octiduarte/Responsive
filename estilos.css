@@ -1,0 +1,100 @@
+header {
+  background-color: rgb(22, 22, 22);
+  color: white;
+  width: 25%;
+  float: left;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: rgb(251, 68, 68);
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  background-color: rgb(78, 147, 238);
+  color: white;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: rgb(0, 0, 43);
+  color: white;
+  width: 50%;
+  height: 250px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  background-color: rgb(188, 242, 247);
+  width: 50%;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.extra {
+  background-color: rgb(87, 197, 160);
+  width: 50%;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orden_imageyextra {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.banner {
+  background-color: rgb(222, 222, 0);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+  .menu {
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  header,
+  .menu,
+  .hero,
+  .main,
+  .image,
+  .extra,
+  .banner {
+    width: 100%;
+  }
+  .orden_imageyextra {
+    float: none;
+  }
+  /* Aquí van los estilos para celulares */
+}
