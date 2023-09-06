@@ -7,15 +7,17 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: header;
 }
 
 .menu {
-  background-color: rgb(251, 68, 68);
+  background-color: rgb(255 41 41);
   color: white;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: menu;
 }
 
 .hero {
@@ -25,10 +27,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: hero;
 }
 
 main {
-  background-color: rgb(0, 0, 43);
+  background-color: rgb(0 0 20);
   color: white;
   width: 50%;
   height: 250px;
@@ -36,6 +39,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: main;
+
 }
 
 .image {
@@ -45,6 +50,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: image;
 }
 
 .extra {
@@ -54,47 +60,126 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: extra;
 }
 
 .orden_imageyextra {
   display: flex;
   flex-direction: column;
   align-items: end;
+  grid-area: contenedor_hijo;
 }
 
 .banner {
-  background-color: rgb(222, 222, 0);
-  height: 200px;
+  background-color: rgb(255 178 45);
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: banner;
 }
 
 body {
   margin: 0;
   text-align: center;
+  font-size: 25px;
+  font-family: sans-serif;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   header {
     width: 100%;
   }
+
+  .hero {
+    width: 100%;
+    height: 250px;
+  }
+
   .menu {
+    width: 100%;
+    height: 525px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .banner {
+    width: 100%;
+    height: 150px;
+  }
+
+  .orden_imageyextra {
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+
+  .image {
+    width: 25%;
+  }
+
+  .extra {
+    width: 75%;
+  }
+
+  .container_padre {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-areas:
+      "header header"
+      "hero hero"
+      "menu main"
+      "menu banner "
+      "menu contenedor_hijo";
   }
 }
 
-@media only screen and (max-width: 320px) {
-  header,
-  .menu,
-  .hero,
-  .main,
-  .image,
-  .extra,
+@media screen and (max-width: 320px) {
+
+  header {
+    width: 100%;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .menu {
+    width: 100%;
+    height: 100px;
+  }
+
+  main {
+    width: 100%;
+  }
+
   .banner {
     width: 100%;
   }
+
   .orden_imageyextra {
-    float: none;
+    width: 100%;
+    flex-direction: column-reverse;
   }
-  /* Aquí van los estilos para celulares */
+
+  .image {
+    width: 100%;
+  }
+
+  .extra {
+    width: 100%;
+  }
+
+  .container_padre {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-areas:
+      "header"
+      "menu"
+      "hero"
+      "main"
+      "banner"
+      "contenedor_hijo";
+  }
 }
